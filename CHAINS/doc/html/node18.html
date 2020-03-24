@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Data Organization and Naming Schema</TITLE>
+<META NAME="description" CONTENT="Data Organization and Naming Schema">
+<META NAME="keywords" CONTENT="Chains_overview2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="Chains_overview2.css">
+
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="Chains_overview2.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html223"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html221"
+  HREF="Chains_overview2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html215"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html224"
+  HREF="node19.html">Example 1</A>
+<B> Up:</B> <A NAME="tex2html222"
+  HREF="Chains_overview2.html">The CHAINS Speech Corpus:</A>
+<B> Previous:</B> <A NAME="tex2html216"
+  HREF="node17.html">Speakers</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00060000000000000000">
+Data Organization and Naming Schema</A>
+</H1>
+The sound files contained in the corpus are .<SMALL>WAV</SMALL> files sampled at 44100 Hz with a resolution of 16 bits. The content is organized according to the following hierarchy:
+
+<P>
+<PRE>
+/data/[SpeakingStyle]/[SpeakerID]/[filename].wav
+</PRE>
+
+<P>
+where:
+
+<P>
+<PRE>
+[SpeakingStyle]	:= fast|retell|rsi|solo|sync|whsp
+[SpeakerID] 	:= the string identifying the speaker
+</PRE> 
+
+<P>
+the label <code>sync</code> indicates <SMALL>SYNCHRONOUS</SMALL> recordings, while <code>whsp</code> indicates <SMALL>WHISPER</SMALL>ed recordings.
+In order to maximise the readability of the <code>[filename]</code>, it is constructed as follows:
+
+<P>
+<PRE>
+[filename] := [SpeakerID]_[TextID]_[SpeakingStyle]_[TargetID]
+</PRE>
+
+<P>
+where:
+
+<P>
+<PRE>
+[SpeakerID] := the string identifying the speaker
+[TextID] := the code uniquely identifying the text
+[SpeakingStyle]	:= fast|retell|rsi|solo|sync|whsp
+[TargetID] := id of the target/co-speaker
+</PRE>
+
+<P>
+The tag <code>TargetID</code> is used only in the relevant speaking styles: <code>sync</code> and <code>rsi</code>.  As conditions <SMALL>SOLO, SYNCHRONOUS</SMALL> and <SMALL>RETELL</SMALL> were recorded in a studio, additional tracks recorded on different microphones are available if needed.  These additional tracks are not being released in this initial version of the corpus, but may be obtained by applying to the authors.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html225"
+  HREF="node19.html">Example 1</A>
+<LI><A NAME="tex2html226"
+  HREF="node20.html">Example 2</A>
+<LI><A NAME="tex2html227"
+  HREF="node21.html">Example 3</A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+grimaldm
+2007-04-03
+</ADDRESS>
+</BODY>
+</HTML>

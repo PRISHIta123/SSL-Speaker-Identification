@@ -1,1 +1,4 @@
 # SSL-Speaker-Identification
+Identifying and clustering speaker instances in a given audio sample through semi-supervised learning. 
+
+The algorithm makes use of an ensemble of classifiers (Naive Bayes, Support Vector Machines and Logistic Regression) trained on the labeled examples from the CHAINS dataset (https://chains.ucd.ie/) to individually return class probabilities on unlabeled examples. These probabilities are then averaged to decide the most confident prediction. The available labeled examples for training are then updated iteratively with every new prediction that is made till no more unlabeled training examples are present. Details of the algorithm can be found on page 5 of the paper at http://ml.math.upatras.gr/wp-content/uploads/2015/12/Speaker-Identi%EF%AC%81cation-Using-Semi-supervised-Learning_Specom2015.pdf. Training to Testing data ratio used is 3:1. 
